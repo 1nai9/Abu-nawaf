@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #4a0508 0%, #0c0b0c 70%); 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== شريط التنقل السفلي ===== */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a0f10;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 2px solid #b6121d;
+}
+
+.navbar a {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #ff3b45;
+}
+
+/* ===== صفحة الروابط ===== */
+.links-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.link-button {
+  background-color: #2a0608;
+  color: #fff;
+  border: 2px solid #b6121d;
+  border-radius: 12px;
+  padding: 14px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 70%;
+  max-width: 10000px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.link-button:hover {
+  background-color: #b6121d;
+  border-color: #b6121d;
+}
+
+/* ===== صفحة البروفايل ===== */
+.profile-header {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.profile-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(180deg, #6a0a0e 0%, #4a0508 60%, #0c0b0c 100%);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #b6121d;
+}
+
+.profile-top {
+  position: absolute;
+  bottom: -40px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #2a0608;
+  border: 6px solid #b6121d;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  color: #fff;
+  position: relative;
+  top: 25px;
+  right: -10px;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffd7d7;
+}
+
+.profile-info {
+  margin-top: -50px;
+  padding: 50px;
+  color: #f0cece;
+  text-align: center;
+}
+
+.about-me-box {
+  background-color: #2a0608;
+  color: #fff;
+  border-radius: 15px;
+  padding: 17px;
+  font-size: 15px;
+  text-align: right;
+  width: 90%;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  margin-top: 25px;
+  border-left: 5px solid #b6121d;
+  
+}
+
+.about-me-box h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #ff3b45;
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-me-box {
+    max-width: 1300px;
+    margin-top: 50px;
+  }
+
+  .link-button {
+    max-width: 100000px;
+    margin-top: 75px;
+  }
+
+  .profile-header {
+    height: 500px;
+  }
+
+  .profile-banner {
+    height: 470px;
+    background: linear-gradient(180deg, #6a0a0e 0%, #4a0508 60%, #0c0b0c 100%);
+    border-bottom: 3px solid #b6121d;
+  }
+}
+
+/* العلم */
+.flag-tiny {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  margin-right: 1px;
+  min-width: 20px;
+  height: 14px;
+  padding: 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffd7d7;
+  background-color: #2a0608;
+  border: 2px solid #b6121d;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 13px;
+  text-transform: uppercase;
+}
